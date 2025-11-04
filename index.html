@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Sitio Avanzado</title>
+
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- NAVBAR -->
+  <header class="bg-white shadow fixed w-full top-0 z-10">
+    <nav class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold text-blue-600">MiSitio</h1>
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="#inicio" class="hover:text-blue-600">Inicio</a></li>
+        <li><a href="#servicios" class="hover:text-blue-600">Servicios</a></li>
+        <li><a href="#contacto" class="hover:text-blue-600">Contacto</a></li>
+      </ul>
+      <button id="menu-btn" class="md:hidden text-blue-600 text-3xl">☰</button>
+    </nav>
+
+    <!-- Menú móvil -->
+    <ul id="menu" class="hidden flex-col bg-white text-center md:hidden">
+      <li><a href="#inicio" class="block py-2 hover:bg-blue-100">Inicio</a></li>
+      <li><a href="#servicios" class="block py-2 hover:bg-blue-100">Servicios</a></li>
+      <li><a href="#contacto" class="block py-2 hover:bg-blue-100">Contacto</a></li>
+    </ul>
+  </header>
+
+  <!-- HERO -->
+  <section id="inicio" class="pt-24 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-center py-32">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4">Bienvenido a Mi Sitio Avanzado</h2>
+    <p class="text-lg md:text-xl mb-8">Creamos soluciones web modernas y profesionales</p>
+    <a href="#servicios" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition">Ver Servicios</a>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios" class="py-20 container mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-10">Nuestros Servicios</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2">Diseño Web</h3>
+        <p>Diseños atractivos, modernos y adaptables a todos los dispositivos.</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2">Desarrollo Full Stack</h3>
+        <p>Aplicaciones completas con las últimas tecnologías.</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2">Optimización SEO</h3>
+        <p>Haz que tu sitio aparezca entre los primeros resultados en Google.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="bg-blue-600 text-white py-20">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">Contáctanos</h2>
+      <form class="max-w-md mx-auto bg-white text-gray-800 p-8 rounded-2xl shadow space-y-4">
+        <input type="text" placeholder="Tu nombre" class="w-full p-3 border rounded" required>
+        <input type="email" placeholder="Tu correo" class="w-full p-3 border rounded" required>
+        <textarea placeholder="Tu mensaje" rows="4" class="w-full p-3 border rounded" required></textarea>
+        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded font-semibold hover:bg-blue-700 transition">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white text-center py-6">
+    <p>© 2025 Mi Sitio Avanzado - Todos los derechos reservados</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
